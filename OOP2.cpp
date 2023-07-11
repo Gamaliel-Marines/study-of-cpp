@@ -10,6 +10,11 @@ private:
     int age;
     std::list<std::string> hobbies;
 
+protected:
+
+int numberhobbies;
+
+
 public:
 
     Person()
@@ -72,6 +77,14 @@ public:
         {
             std::cout<<hob<<std::endl;
         }
+    }
+
+    void interesting()
+    {
+        if(numberhobbies < 3)
+            std::cout<<"You are not interesting"<<std::endl;
+        else
+            std::cout<<"You are interesting"<<std::endl;
     }
 
 };
@@ -157,10 +170,27 @@ int main()
     s1.addhobby("running");
     s1.addhobby("reading");
     s1.addhobby("coding");
+    s1.addhobby("cooking");
     s1.set_school("ITESM");
     s1.set_major("Computer Science");
     s1.set_graduation_year(2025);
     s1.info();
+    std::cout<<std::endl;
+
+    std::cout<<std::endl;
+
+    Person * per1 = &p1;
+    per1->info();
+    std::cout<<std::endl;
+    per1->interesting();
+    std::cout<<std::endl;
+    Student * stu1 = &s1;
+    std::cout<<std::endl;
+    stu1->info();
+    std::cout<<std::endl;
+    stu1->interesting();
+    std::cout<<std::endl;
+
 
 
         
